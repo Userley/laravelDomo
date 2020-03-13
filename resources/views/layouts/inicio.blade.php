@@ -7,6 +7,7 @@
     </ol>
 </nav>
 @endsection
+
 @section('contenido')
 <div class="container-fluid">
     <div class="row">
@@ -20,7 +21,8 @@
                                 <h5 class="card-title">{{$dis->Nombre}}</h5>
                                 <p></p>
                                 <input type="checkbox" checked data-toggle="toggle" data-on="Encendido"
-                                    data-off="Apagado" data-onstyle="success" data-offstyle="danger">
+                                    data-off="Apagado" data-onstyle="success" data-offstyle="danger"
+                                    id="dispositivo{{$dis->IdDispositivo}}">
                             </div>
                             <div class="card-footer">
                                 <p> Dispositivo: {{ ($dis->Estado===1) ? "Activo" : "Inactivo"}}</p>
@@ -49,6 +51,9 @@
                                 }]
                             }
                         });
+
+
+
                         </script>
                     </div>
                 </div>
@@ -59,3 +64,27 @@
     </div>
 </div>
 @stop
+
+{{-- <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    function validar()
+    {
+        var dis1= document.getElementById("dispositivo1");
+        var estado={!! $dis->Estado!!};
+        if (estado=='1') 
+        {
+            document.getElementById("dispositivo1").setAttribute('Checked',true);
+        }else
+        {
+            document.getElementById("dispositivo1").removeAttribute('Checked');
+        
+        }
+    }
+
+  });
+
+setInterval(console.log("hola"),2000);
+
+
+</script> --}}

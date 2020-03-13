@@ -24,6 +24,10 @@
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js">
     </script>
+                            <script type="text/javascript">
+
+                                window.setInterval(console.log("hola"),2000);
+                                </script>
     <title>Sitio Web Laravel</title>
 </head>
 
@@ -31,6 +35,7 @@
 
 
     @extends('layouts/footer')
+
     @extends('layouts/header')
 </body>
 
